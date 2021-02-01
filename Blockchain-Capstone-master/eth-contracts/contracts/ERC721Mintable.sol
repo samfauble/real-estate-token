@@ -1,16 +1,16 @@
-pragma solidity ^0.5.0;
+pragma solidity >=0.5.0;
 
-import 'openzeppelin-solidity/contracts/utils/Address.sol';
-import 'openzeppelin-solidity/contracts/drafts/Counters.sol';
-import 'openzeppelin-solidity/contracts/math/SafeMath.sol';
-import 'openzeppelin-solidity/contracts/token/ERC721/IERC721Receiver.sol';
+import '../../node_modules/openzeppelin-solidity/contracts/utils/Address.sol';
+import '../../node_modules/openzeppelin-solidity/contracts/drafts/Counters.sol';
+import '../../node_modules/openzeppelin-solidity/contracts/math/SafeMath.sol';
+import '../../node_modules/openzeppelin-solidity/contracts/token/ERC721/IERC721Receiver.sol';
 import "./Oraclize.sol";
 
 contract Ownable {
 
     address private _owner;
     
-    function getOwner() public returns(address) {
+    function getOwner() public view returns(address) {
         return _owner;
     }
 
@@ -111,7 +111,7 @@ contract ERC721 is Pausable, ERC165 {
     bytes4 private constant _ERC721_RECEIVED = 0x150b7a02;
 
     // Mapping from token ID to owner
-    mapping (uint256 => address) private _tokenOwner;
+    mapping (uint256 => address) internal _tokenOwner;
 
     // Mapping from token ID to approved address
     mapping (uint256 => address) private _tokenApprovals;
@@ -120,7 +120,7 @@ contract ERC721 is Pausable, ERC165 {
     // IMPORTANT: this mapping uses Counters lib which is used to protect overflow when incrementing/decrementing a uint
     // use the following functions when interacting with Counters: increment(), decrement(), and current() to get the value
     // see: https://github.com/OpenZeppelin/openzeppelin-solidity/blob/master/contracts/drafts/Counters.sol
-    mapping (address => Counters.Counter) private _ownedTokensCount;
+    mapping (address => Counters.Counter) internal _ownedTokensCount;
 
     // Mapping from owner to operator approvals
     mapping (address => mapping (address => bool)) private _operatorApprovals;
@@ -132,9 +132,9 @@ contract ERC721 is Pausable, ERC165 {
         _registerInterface(_INTERFACE_ID_ERC721);
     }
 
-    function balanceOf(address owner) public view returns (uint256) {
-        uint256 count =  _ownedTokensCount[owner].current();
-        return count;
+    function balanceOf(address owner) public view returns (uint256 countVal) {
+        uint256 countVal = _ownedTokensCount[owner].current();
+        return countVal;
         // TIP: remember the functions to use for Counters. you can refresh yourself with the link above
     }
 
@@ -218,12 +218,13 @@ contract ERC721 is Pausable, ERC165 {
     function _mint(address to, uint256 tokenId) internal {
 
         require(!_exists(tokenId), "Token already exists");
-        require(to.isContract() == true, "Not valid address");
+        require(to.isContract() == false, "Not valid address");
         
-         _tokenOwner[tokenId] = to;
-         _ownedTokensCount[to].increment();
+        _tokenOwner[tokenId] = to; 
+        _ownedTokensCount[to].increment();
         
-        emit Transfer(getOwner(), to, tokenId);
+        
+        emit Transfer(getOwner(), to, _ownedTokensCount[to].current());
     }
 
     // @dev Internal function to transfer ownership of a given token ID to another address.
@@ -231,10 +232,10 @@ contract ERC721 is Pausable, ERC165 {
     function _transferFrom(address from, address to, uint256 tokenId) internal {
 
         require(ownerOf(tokenId) == from, "From address must be owner of token");
-        require(to.isContract() == true, "Not valid address");
+        require(to.isContract() == false, "Not valid address");
         require(_isApprovedOrOwner(from, tokenId) == true, "Not approved to transfer");
        
-        transferFrom(from, to, tokenId);
+        _tokenOwner[tokenId] = to;
         _ownedTokensCount[from].decrement();
         _ownedTokensCount[to].increment();
 
@@ -476,7 +477,7 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
         return _symbol;
     }
 
-       function getBaseTokenURI() public returns(string memory) {
+       function getBaseTokenURI() public view returns(string memory) {
         return _baseTokenURI;
     }
 
@@ -509,6 +510,9 @@ contract CustomERC721Token is ERC721Metadata {
     }
 
     function mint(address to, uint256 tokenId, string memory tokenURI) public onlyOwner returns (bool) {
+        address owner = getOwner();
+        require(to == owner, "Caller needs to be contract owner");
+
         super._mint(to, tokenId);
         super.setTokenURI(tokenId);
         return true;

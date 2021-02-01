@@ -1,0 +1,112 @@
+{
+  "contractName": "SolnSquareVerifier",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.5+commit.47a71e8f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/samfa/Documents/BCNanodegree/project5/Blockchain-Capstone-master/Blockchain-Capstone-master/eth-contracts/contracts/SolnSquareVerifier.sol\":\"SolnSquareVerifier\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/samfa/Documents/BCNanodegree/project5/Blockchain-Capstone-master/Blockchain-Capstone-master/eth-contracts/contracts/SolnSquareVerifier.sol\":{\"keccak256\":\"0xa5405d86b6027ec34cae057c2c5e4f29c4f6ffd6617bf1dbc086e42ad7463bd5\",\"urls\":[\"bzzr://4e2e1e62420ed89c918c85593ec42246d5867e5a7e6b5e6e4820f26abf52af27\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3fe6080604052600080fdfea165627a7a72305820024fb13d60b5acca5124e25a441e0a04aea9fdb44d26d41d17ab1e36b1c6218c0029",
+  "deployedBytecode": "0x6080604052600080fdfea165627a7a72305820024fb13d60b5acca5124e25a441e0a04aea9fdb44d26d41d17ab1e36b1c6218c0029",
+  "sourceMap": "134:32:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;134:32:3;;;;;;;",
+  "deployedSourceMap": "134:32:3:-;;;;;",
+  "source": "pragma solidity >=0.4.21;\n\n// TODO define a contract call to the zokrates generated solidity contract <Verifier> or <renamedVerifier>\ncontract SolnSquareVerifier {\n\n}\n\n\n// TODO define another contract named SolnSquareVerifier that inherits from your ERC721Mintable class\n\n\n\n// TODO define a solutions struct that can hold an index & an address\n\n\n// TODO define an array of the above struct\n\n\n// TODO define a mapping to store unique solutions submitted\n\n\n\n// TODO Create an event to emit when a solution is added\n\n\n\n// TODO Create a function to add the solutions to the array and emit the event\n\n\n\n// TODO Create a function to mint new NFT only after the solution has been verified\n//  - make sure the solution is unique (has not been used before)\n//  - make sure you handle metadata as well as tokenSuplly\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+  "sourcePath": "C:/Users/samfa/Documents/BCNanodegree/project5/Blockchain-Capstone-master/Blockchain-Capstone-master/eth-contracts/contracts/SolnSquareVerifier.sol",
+  "ast": {
+    "absolutePath": "/C/Users/samfa/Documents/BCNanodegree/project5/Blockchain-Capstone-master/Blockchain-Capstone-master/eth-contracts/contracts/SolnSquareVerifier.sol",
+    "exportedSymbols": {
+      "SolnSquareVerifier": [
+        7457
+      ]
+    },
+    "id": 7458,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7456,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:25:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 7457,
+        "linearizedBaseContracts": [
+          7457
+        ],
+        "name": "SolnSquareVerifier",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 7458,
+        "src": "134:32:3"
+      }
+    ],
+    "src": "0:837:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/samfa/Documents/BCNanodegree/project5/Blockchain-Capstone-master/Blockchain-Capstone-master/eth-contracts/contracts/SolnSquareVerifier.sol",
+    "exportedSymbols": {
+      "SolnSquareVerifier": [
+        7457
+      ]
+    },
+    "id": 7458,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7456,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:25:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 7457,
+        "linearizedBaseContracts": [
+          7457
+        ],
+        "name": "SolnSquareVerifier",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 7458,
+        "src": "134:32:3"
+      }
+    ],
+    "src": "0:837:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.5+commit.47a71e8f.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x76156197B5572F4d8e483e8570dC8a49950d0c20",
+      "transactionHash": "0xcc03f1e489a15fa8a13dd577e8d87b39a7f8bd795ffab4bd2756da449210f864"
+    }
+  },
+  "schemaVersion": "3.3.2",
+  "updatedAt": "2021-02-01T00:17:44.146Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

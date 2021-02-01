@@ -1,0 +1,112 @@
+{
+  "contractName": "SquareVerifier",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.5+commit.47a71e8f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/samfa/Documents/BCNanodegree/project5/Blockchain-Capstone-master/Blockchain-Capstone-master/eth-contracts/contracts/SquareVerifier.sol\":\"SquareVerifier\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/samfa/Documents/BCNanodegree/project5/Blockchain-Capstone-master/Blockchain-Capstone-master/eth-contracts/contracts/SquareVerifier.sol\":{\"keccak256\":\"0xdd027783033a5000dd54fbe7329bcb8e80cb87b4d706dcd32e7b378d4de84171\",\"urls\":[\"bzzr://eb7c2d724e424b68b56446164d8989cf08ccb1a81de015d841e83d7ce025cc0e\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3fe6080604052600080fdfea165627a7a72305820d740da155138b81c45908cae62d0833c9bce542f782419abe3a6d5de913aee000029",
+  "deployedBytecode": "0x6080604052600080fdfea165627a7a72305820d740da155138b81c45908cae62d0833c9bce542f782419abe3a6d5de913aee000029",
+  "sourceMap": "28:34:4:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;28:34:4;;;;;;;",
+  "deployedSourceMap": "28:34:4:-;;;;;",
+  "source": "pragma solidity >=0.4.2;\r\n\r\ncontract SquareVerifier {\r\n    \r\n}",
+  "sourcePath": "C:/Users/samfa/Documents/BCNanodegree/project5/Blockchain-Capstone-master/Blockchain-Capstone-master/eth-contracts/contracts/SquareVerifier.sol",
+  "ast": {
+    "absolutePath": "/C/Users/samfa/Documents/BCNanodegree/project5/Blockchain-Capstone-master/Blockchain-Capstone-master/eth-contracts/contracts/SquareVerifier.sol",
+    "exportedSymbols": {
+      "SquareVerifier": [
+        7460
+      ]
+    },
+    "id": 7461,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7459,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:4"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 7460,
+        "linearizedBaseContracts": [
+          7460
+        ],
+        "name": "SquareVerifier",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 7461,
+        "src": "28:34:4"
+      }
+    ],
+    "src": "0:62:4"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/samfa/Documents/BCNanodegree/project5/Blockchain-Capstone-master/Blockchain-Capstone-master/eth-contracts/contracts/SquareVerifier.sol",
+    "exportedSymbols": {
+      "SquareVerifier": [
+        7460
+      ]
+    },
+    "id": 7461,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7459,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:4"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 7460,
+        "linearizedBaseContracts": [
+          7460
+        ],
+        "name": "SquareVerifier",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 7461,
+        "src": "28:34:4"
+      }
+    ],
+    "src": "0:62:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.5+commit.47a71e8f.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xEEb9784441Ab3E93447186D6Dfae92cA8B44d232",
+      "transactionHash": "0x2c61842589ac3921f5cfaf7b006fa689cea586b4d9dbb5e848d7b359aa5513d3"
+    }
+  },
+  "schemaVersion": "3.3.2",
+  "updatedAt": "2021-02-01T00:17:44.142Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
