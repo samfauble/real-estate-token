@@ -1,8 +1,8 @@
-pragma solidity >=0.4.2;
+pragma solidity >=0.4.21;
 
 // TODO define a contract call to the zokrates generated solidity contract <Verifier> or <renamedVerifier>
 contract SolnSquareVerifier {
-    
+
 }
 
 
