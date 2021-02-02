@@ -5,3 +5,77 @@
 
     
 // Test verification with incorrect proof
+
+const Verifier = artifacts.require("Verifier");
+const {proof, input} = require('../../zokrates/code/square/proof.json');
+const {assert} = require("chai");
+
+contract('Verifier', async accounts => {
+    
+    let account1 = accounts[0];
+    let account2 = accounts[1];
+    let contract;
+    
+    describe("Zokrates Verifier", function() {
+
+        beforeEach(async () => {
+            contract = await Verifier.new(accounts);
+        });
+
+        it("should show up", async function() {
+            const {
+                A,
+                A_p,
+                B,
+                B_p,
+                C,
+                C_p,
+                H,
+                K
+            } = proof;
+
+            let result = await contract.verifyTx.call( 
+                A,
+                A_p,
+                B,
+                B_p,
+                C,
+                C_p,
+                H,
+                K,
+                input
+            );
+
+            assert.equal(result, true, "The result must be true.")
+        })
+
+        it("should show up", async function() {
+
+            const {
+                A,
+                A_p,
+                B,
+                B_p,
+                C,
+                C_p,
+                H,
+                K
+            } = proof;
+
+            let result = await contract.verifyTx.call( 
+                A,
+                A_p,
+                B,
+                B_p,
+                C,
+                C_p,
+                H,
+                K,
+                [5, 1]
+            );
+
+            assert.equal(result, false, "The result must be false.")
+        })
+    
+    })
+})
