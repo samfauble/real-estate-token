@@ -24,6 +24,10 @@ contract SolnSquareVerifier is CustomERC721Token {
 
     event SolutionAdded(address addedAddress);
 
+    function returnArrayLength() public view returns(uint256) {
+        return solutionsArr.length;
+    }
+
     function addSolution(uint256 index, address addr) public {
         solutions[addr].solutionAddress = addr;
         solutions[addr].index = index;
@@ -33,20 +37,25 @@ contract SolnSquareVerifier is CustomERC721Token {
         emit SolutionAdded(addr);
     }
 
-    function mint(address addr, uint256 tokenId, string memory tokenURI) public returns(bool) {
-        uint256 length = solutionsArr.length;
-        uint256 newIndex = length.sub(1);
-
-        for(uint256 i = 0; i < length; i++) {
-            Solution memory current = solutionsArr[i];
-            require(current.solutionAddress != solutions[addr].solutionAddress, "Solutions must be unique");
-        }
-
-
-        super.mint(addr, tokenId, tokenURI);
-        addSolution(newIndex, addr);
-
-        return true;
+    function mint(
+        uint Id,
+        string memory tokenURI,
+        uint[2] memory A,
+        uint[2] memory A_p,
+        uint[2][2] memory B,
+        uint[2] memory B_p,
+        uint[2] memory C,
+        uint[2] memory C_p,
+        uint[2] memory H,
+        uint[2] memory K,
+        uint[2] memory input
+    ) public returns(bool) {
+        //bool isVerified = verifier.verifyTx(A, A_p, B, B_p, C, C_p, H, K, input);
+        //require(isVerified == true, "Verification failed");
+        
+        addSolution(Id, msg.sender);
+        bool res = super.mint(msg.sender, Id, tokenURI);
+        return res;
     }
 }
 
