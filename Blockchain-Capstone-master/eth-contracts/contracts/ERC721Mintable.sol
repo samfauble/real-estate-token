@@ -94,7 +94,7 @@ contract ERC165 {
     }
 }
 
-contract ERC721 is Pausable, ERC165 {
+contract ERC721 is Pausable, ERC165{
 
     event Transfer(address indexed from, address indexed to, uint256 indexed tokenId);
 
@@ -460,24 +460,24 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
      */
 
 
-    constructor (string memory name, string memory symbol, string memory baseTokenURI) public {
+    constructor () public {
         // TODO: set instance var values
-        _name = name;
-        _symbol = symbol;
-        _baseTokenURI = baseTokenURI;
+        _name = "HousingCoin";
+        _symbol = "HC";
+        _baseTokenURI = "https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/";
         _registerInterface(_INTERFACE_ID_ERC721_METADATA);
     }
 
     // TODO: create external getter functions for name, symbol, and baseTokenURI
-    function getName() external returns(string memory) {
+    function name() external returns(string memory) {
         return _name;
     }
 
-       function getSymbol() external returns(string memory) {
+       function symbol() external returns(string memory) {
         return _symbol;
     }
 
-       function getBaseTokenURI() public view returns(string memory) {
+       function baseTokenURI() public view returns(string memory) {
         return _baseTokenURI;
     }
 
@@ -491,7 +491,7 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
     function setTokenURI(uint256 tokenId) internal {
         require(_exists(tokenId) == true);
         string memory stringified = uint2str(tokenId);
-        string memory baseTokenURI = getBaseTokenURI();
+        string memory baseTokenURI = baseTokenURI();
         string memory newURI  = strConcat(baseTokenURI, stringified);
         _baseTokenURI = newURI;
     }
@@ -505,8 +505,7 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
 }
 
 contract CustomERC721Token is ERC721Metadata {
-    constructor() ERC721Metadata("AwesomeCoin", "AC", "https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/") public {
-
+    constructor() public {
     }
 
     function mint(address to, uint256 tokenId, string memory tokenURI) public onlyOwner returns (bool) {

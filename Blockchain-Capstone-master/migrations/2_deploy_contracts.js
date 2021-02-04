@@ -6,5 +6,5 @@ var Verifier = artifacts.require("./verifier.sol");
 module.exports = function(deployer) {
   deployer.deploy(SquareVerifier);
   deployer.deploy(SolnSquareVerifier);
-  deployer.deploy(Verifier);
+
 };

@@ -1,0 +1,112 @@
+{
+  "contractName": "SquareVerifier",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.5+commit.47a71e8f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/samfa/Documents/BCNanodegree/project5/Blockchain-Capstone-master/Blockchain-Capstone-master/contracts/SquareVerifier.sol\":\"SquareVerifier\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/samfa/Documents/BCNanodegree/project5/Blockchain-Capstone-master/Blockchain-Capstone-master/contracts/SquareVerifier.sol\":{\"keccak256\":\"0xdd027783033a5000dd54fbe7329bcb8e80cb87b4d706dcd32e7b378d4de84171\",\"urls\":[\"bzzr://eb7c2d724e424b68b56446164d8989cf08ccb1a81de015d841e83d7ce025cc0e\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3fe6080604052600080fdfea165627a7a72305820d5b3cf552608bdd35ade288154491a182880ac642fe594749e9783c76b7803850029",
+  "deployedBytecode": "0x6080604052600080fdfea165627a7a72305820d5b3cf552608bdd35ade288154491a182880ac642fe594749e9783c76b7803850029",
+  "sourceMap": "28:34:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;28:34:2;;;;;;;",
+  "deployedSourceMap": "28:34:2:-;;;;;",
+  "source": "pragma solidity >=0.4.2;\r\n\r\ncontract SquareVerifier {\r\n    \r\n}",
+  "sourcePath": "C:/Users/samfa/Documents/BCNanodegree/project5/Blockchain-Capstone-master/Blockchain-Capstone-master/contracts/SquareVerifier.sol",
+  "ast": {
+    "absolutePath": "/C/Users/samfa/Documents/BCNanodegree/project5/Blockchain-Capstone-master/Blockchain-Capstone-master/contracts/SquareVerifier.sol",
+    "exportedSymbols": {
+      "SquareVerifier": [
+        38
+      ]
+    },
+    "id": 39,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 37,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 38,
+        "linearizedBaseContracts": [
+          38
+        ],
+        "name": "SquareVerifier",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 39,
+        "src": "28:34:2"
+      }
+    ],
+    "src": "0:62:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/samfa/Documents/BCNanodegree/project5/Blockchain-Capstone-master/Blockchain-Capstone-master/contracts/SquareVerifier.sol",
+    "exportedSymbols": {
+      "SquareVerifier": [
+        38
+      ]
+    },
+    "id": 39,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 37,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 38,
+        "linearizedBaseContracts": [
+          38
+        ],
+        "name": "SquareVerifier",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 39,
+        "src": "28:34:2"
+      }
+    ],
+    "src": "0:62:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.5+commit.47a71e8f.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x5ae3E26bA339F51BAb6f8FC981803ae322874df3",
+      "transactionHash": "0x7f94ed17446c8920a951f06480573665f4c2b79218edeb7f86f8d0ac85826328"
+    }
+  },
+  "schemaVersion": "3.3.2",
+  "updatedAt": "2021-02-02T22:04:38.325Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
