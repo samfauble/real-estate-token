@@ -1,6 +1,7 @@
 # udacity-BCfinal
 
 ## Testing instructions
+- Make sure you're on `master` branch
 - Set up a Ganache network for testing 
 - Make sure the `development` network corresponds to that of the Ganache instance
 - install dependencies with `npm i`
