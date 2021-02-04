@@ -1,7 +1,5 @@
 # udacity-BCfinal
 
-# udacity-BCfinal
-
 ## Testing instructions
 - Set up a Ganache network for testing 
 - Make sure the `development` network corresponds to that of the Ganache instance
