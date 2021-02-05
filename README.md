@@ -10,7 +10,7 @@
 
 ## Contract info - Rinkeby
 - name: "SolnSquareVerifier"
-- address: 0x955e627ca6773AfFde53bb9863A8CC91E26f427c
+- address: 0x79cbA42A929940149A9dA5966868f88878Fd545D
 - abi : [
     {
       "constant": true,
@@ -417,16 +417,10 @@
       "type": "function"
     },
     {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "name": "addedAddress",
-          "type": "address"
-        }
-      ],
-      "name": "SolutionAdded",
-      "type": "event"
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
     },
     {
       "anonymous": false,
@@ -531,97 +525,6 @@
       "type": "event"
     },
     {
-      "constant": true,
-      "inputs": [],
-      "name": "returnArrayLength",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "index",
-          "type": "uint256"
-        },
-        {
-          "name": "addr",
-          "type": "address"
-        }
-      ],
-      "name": "addSolution",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "Id",
-          "type": "uint256"
-        },
-        {
-          "name": "tokenURI",
-          "type": "string"
-        },
-        {
-          "name": "A",
-          "type": "uint256[2]"
-        },
-        {
-          "name": "A_p",
-          "type": "uint256[2]"
-        },
-        {
-          "name": "B",
-          "type": "uint256[2][2]"
-        },
-        {
-          "name": "B_p",
-          "type": "uint256[2]"
-        },
-        {
-          "name": "C",
-          "type": "uint256[2]"
-        },
-        {
-          "name": "C_p",
-          "type": "uint256[2]"
-        },
-        {
-          "name": "H",
-          "type": "uint256[2]"
-        },
-        {
-          "name": "K",
-          "type": "uint256[2]"
-        },
-        {
-          "name": "input",
-          "type": "uint256[2]"
-        }
-      ],
-      "name": "mint",
-      "outputs": [
-        {
-          "name": "",
-          "type": "bool"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
       "constant": false,
       "inputs": [
         {
@@ -641,6 +544,75 @@
       "outputs": [
         {
           "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ]
+     
+  
+  -name: "Verifier"
+  - address: 0xFf12250df325F53A5E95C5fCE490B0487aef5828
+  - abi: [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "s",
+          "type": "string"
+        }
+      ],
+      "name": "Verified",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "uint256[2]"
+        },
+        {
+          "name": "a_p",
+          "type": "uint256[2]"
+        },
+        {
+          "name": "b",
+          "type": "uint256[2][2]"
+        },
+        {
+          "name": "b_p",
+          "type": "uint256[2]"
+        },
+        {
+          "name": "c",
+          "type": "uint256[2]"
+        },
+        {
+          "name": "c_p",
+          "type": "uint256[2]"
+        },
+        {
+          "name": "h",
+          "type": "uint256[2]"
+        },
+        {
+          "name": "k",
+          "type": "uint256[2]"
+        },
+        {
+          "name": "input",
+          "type": "uint256[2]"
+        }
+      ],
+      "name": "verifyTx",
+      "outputs": [
+        {
+          "name": "r",
           "type": "bool"
         }
       ],
