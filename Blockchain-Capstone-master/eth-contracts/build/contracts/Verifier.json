@@ -32919,10 +32919,29 @@
       "links": {},
       "address": "0xde7d05980190d77F5c77F15Cc3add1d6196B28fC",
       "transactionHash": "0xc571d9c6f2040b8b326969c59d36e6be53d4a086b9a3bf5336395c66170368c8"
+    },
+    "4": {
+      "events": {
+        "0x3f3cfdb26fb5f9f1786ab4f1a1f9cd4c0b5e726cbdfc26e495261731aad44e39": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "s",
+              "type": "string"
+            }
+          ],
+          "name": "Verified",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xFf12250df325F53A5E95C5fCE490B0487aef5828",
+      "transactionHash": "0x7055de91108ea3d662b6f7ed1a6e1ccd00e137910f2398ecdf735410fab8c280"
     }
   },
   "schemaVersion": "3.3.2",
-  "updatedAt": "2021-02-04T03:07:14.585Z",
+  "updatedAt": "2021-02-05T05:36:10.696Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

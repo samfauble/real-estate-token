@@ -493,7 +493,9 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
         string memory stringified = uint2str(tokenId);
         string memory baseTokenURI = baseTokenURI();
         string memory newURI  = strConcat(baseTokenURI, stringified);
-        _baseTokenURI = newURI;
+        string memory _baseTokenURI = newURI;
+
+        _tokenURIs[tokenId] = _baseTokenURI;
     }
     // TODO: Create an internal function to set the tokenURI of a specified tokenId
     // It should be the _baseTokenURI + the tokenId in string form

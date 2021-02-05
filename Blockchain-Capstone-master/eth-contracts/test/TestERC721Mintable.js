@@ -31,7 +31,9 @@ contract('TestCustomERC721Token', accounts => {
 
         // token uri should be complete i.e: https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/1
         it('should return token uri', async function () { 
-            let uri = await this.contract.getBaseTokenURI(); 
+            await this.contract.mint(account_one, 123456789, "https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/", {from: account_one});
+            
+            let uri = await this.contract.tokenURI(123456789); 
             assert.equal(uri.toString(), "https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/123456789", "Wrong URI");
         })
 

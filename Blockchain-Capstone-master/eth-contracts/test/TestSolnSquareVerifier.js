@@ -50,7 +50,7 @@ contract("SolnSquareVerifier", (accounts) => {
                 K,
                 input
             );
-
+    
             assert.equal(res, true, "Coin not minted");
         })
     })

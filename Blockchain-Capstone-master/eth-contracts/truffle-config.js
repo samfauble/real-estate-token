@@ -19,9 +19,9 @@
  */
 
  const HDWalletProvider = require('@truffle/hdwallet-provider');
- const infuraKey = "keyHere";
+ const infuraKey = "8800b21056624554b43268d065c7df7c";
 
- const mnemonic = "lorem ipsum";
+ const mnemonic = "sample fire idle broken garlic final grape dinner modify tuna nut fury";
 let provider = () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/${infuraKey}`)
 module.exports = {
   /**

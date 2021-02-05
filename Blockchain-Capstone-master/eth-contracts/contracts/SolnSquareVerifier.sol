@@ -10,7 +10,9 @@ contract SolnSquareVerifier is CustomERC721Token {
 
     using SafeMath for uint256;
 
-    Verifier verifier;
+    //Verifier reference
+    Verifier verifier = Verifier(msg.sender);
+    
 
     struct Solution {
         uint256 index;
@@ -29,6 +31,12 @@ contract SolnSquareVerifier is CustomERC721Token {
     }
 
     function addSolution(uint256 index, address addr) public {
+        
+        for(uint256 i = 0; i < solutionsArr.length; i++) {
+            Solution memory sol = solutionsArr[i];
+            require(sol.index != index, "Solution already exists");
+        }
+        
         solutions[addr].solutionAddress = addr;
         solutions[addr].index = index;
         solutions[addr].exists = true;
@@ -36,6 +44,7 @@ contract SolnSquareVerifier is CustomERC721Token {
         
         emit SolutionAdded(addr);
     }
+
 
     function mint(
         uint Id,
@@ -50,8 +59,7 @@ contract SolnSquareVerifier is CustomERC721Token {
         uint[2] memory K,
         uint[2] memory input
     ) public returns(bool) {
-        //bool isVerified = verifier.verifyTx(A, A_p, B, B_p, C, C_p, H, K, input);
-        //require(isVerified == true, "Verification failed");
+        //require(verifier.verifyTx(A, A_p, B, B_p, C, C_p, H, K, input) == true, "Verification failed");
         
         addSolution(Id, msg.sender);
         bool res = super.mint(msg.sender, Id, tokenURI);
