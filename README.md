@@ -626,5 +626,5 @@
 
 
 ## OpenSea link
-- https://testnets.opensea.io/assets/housingcoin
+- https://testnets.opensea.io/assets/housingcoin-v2
  
