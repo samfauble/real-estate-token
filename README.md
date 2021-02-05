@@ -6,7 +6,7 @@
 - Make sure the `development` network corresponds to that of the Ganache instance
 - install dependencies with `npm i`
 - Navigate to the `eth-contracts` directory
-- Migrate contracts to the Ganache network with `truffle migrate`
+- Migrate contracts to the Ganache network with `truffle migrate` (use the migration scripts inside `eth-contracts`)
 - Run tests with `truffle test`
 
 ## Contract info - Rinkeby
